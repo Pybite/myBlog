@@ -19,13 +19,12 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 //Templating Engine
-app.use(expressLayout);
-app.set('layout', './layouts/main');
+
 app.set('view engine', 'ejs');
 
 // Routes
-app.use('', require('./router/main.js'));
-
+app.use('', require('./router/userRoute.js'));
+app.use('/', require('./router/authRoute.js'));
 
 // Connecting to DB first then starts the server
 mongoose.connect(process.env.MONGO_URI, {dbName: process.env.DATABASE}).then(() => {

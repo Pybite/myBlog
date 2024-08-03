@@ -18,19 +18,23 @@ const userSchema = new mongoose.Schema({
 }, {timestamps: true});
 
 const blogSchema = new mongoose.Schema({
+    email: {
+        type: String,
+        require: true
+    },
+    name: {
+        type: String,
+        require: true
+    },
     title: {
         type: String,
         require: true
     },
-    body: {
-        type: String,
-        require: true
-    },
-    author: {
+    content: {
         type: String,
         require: true
     }
-}, {timestamps: true});
+}, { timestamps: true })
 
 // Encrypts password for every new user
 userSchema.pre('save', async function (next) {
