@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&family=Yeseva+One&display=swap');
 
+:root {
+    --orange-text:hsl(16, 80%, 50%);
+    --gold-text: hsl(51, 80%, 50%);
+    --blue-text: hsl(174, 80%, 50%);
+    --purple: hsl(263, 70%, 30%);
+}
+
 body {
     font-family: "Roboto Condensed", sans-serif;
     background-color: #190933;
@@ -25,33 +32,32 @@ nav h1 {
     border: 1px solid;
     border-radius: 50px;
     padding: 8px;
+    color: var(--gold-text);
 }
-nav h1:hover {
-    color: gold;
-    transition: all 2s; 
-}
+
 
 .nav-list {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     list-style: none;
 }
 .nav-list li a {
     text-decoration: none;
     padding: 5px;
     border-radius: 12px;
-    color: hsl(263, 70%, 62%);
+    color: var(--orange-text);
+    
 }
 
 .nav-list li a:hover {
-    color: hsl(263, 70%, 42%);
+    color: var(--purple);
 }
 /* end of navigation */
 
 /* start of the intro body section */
 #intro-section {
-    border-top: .5px solid hsl(263, 70%, 30%);
-    border-bottom: .5px solid hsl(263, 70%, 30%);
+    border-top: .5px solid var(--purple);
+    border-bottom: .5px solid var(--purple);
     margin: 10px;
     padding: 10px;
 }
@@ -59,52 +65,96 @@ nav h1:hover {
 #intro-section h4 {
     position: relative;
     left: 15%;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    color: var(--blue-text);
+    
 }
 
 .intro-body-info {
     position: relative;
     left: 15%;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-family: "Vujahday Script", cursive;
     font-weight: 800;
     margin-top: 0;
+    color: var(--gold-text)
 }
+
+
 .image-container {
     position: relative;
     left: 830px;
+    top: -280px;
     margin: 10px;
     padding: 10px;
+    width: max-content;
+    z-index: -1;
 }
 
 .personal-links {
     display: flex;
     list-style-type: none;
-    gap: 20px;
+    gap: 50px;
     justify-content: center;
 }
 .personal-links li a {
     color: white;
-    font-size: 3.125rem;
+    font-size: 2.125rem;
 }
+
+ .about-me-container {
+    position: relative;
+    top: 80px;
+    left: 15%;
+    margin-bottom: 15px;
+    border-left: .5px solid gray;
+    width: max-content;
+    padding: 2px 0px 2px 10px;
+ }
+ .about-me-header {
+    color: var(--blue-text);
+ }
+ 
+ .about-bio {
+    font-weight: 400;
+ }
+ .about-me-icons {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+ }
+
 
 @media screen and (max-width: 600px) {
     .nav-list {
       float: none;
-      display: block;
-      text-align: left;
+      text-align: center;
       width: 100%;
       margin: 0;
       padding: 14px;
+      gap: 5px;
+    }
+    .intro-body-info {
+        font-size: 1.1rem;
+
     }
 
     .image-container {
         left: 50%;
+    }
+    .image-container img {
+        width: 120px;
+        height: 120px;
+    }
+    .personal-links li a {
+        font-size: 1.5rem;
     }
   }
 
 
 footer {
     text-align: center;
-    background-color: hsla(0, 0%, 90%, 0.633);
+    background-color: hsla(0, 0%, 20%, 0.633);
+    padding: 5px;
 }
