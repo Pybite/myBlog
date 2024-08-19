@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&family=Yeseva+One&display=swap');
 
 :root {
-    --orange-text:hsl(16, 80%, 50%);
+    --orange-text: hsl(16, 80%, 50%);
     --gold-text: hsl(51, 80%, 50%);
     --blue-text: hsl(174, 80%, 50%);
     --purple: hsl(263, 70%, 30%);
@@ -22,8 +22,9 @@ nav {
     display: flex;
     padding: 0;
     gap: 10px;
-    
+
 }
+
 nav h1 {
     font-family: "Fontdiner Swanky", serif;
     margin-left: 10px;
@@ -41,17 +42,19 @@ nav h1 {
     gap: 20px;
     list-style: none;
 }
+
 .nav-list li a {
     text-decoration: none;
     padding: 5px;
     border-radius: 12px;
     color: var(--orange-text);
-    
+
 }
 
 .nav-list li a:hover {
     color: var(--purple);
 }
+
 /* end of navigation */
 
 /* start of the intro body section */
@@ -67,7 +70,7 @@ nav h1 {
     left: 15%;
     margin-bottom: 15px;
     color: var(--blue-text);
-    
+
 }
 
 .intro-body-info {
@@ -97,12 +100,13 @@ nav h1 {
     gap: 50px;
     justify-content: center;
 }
+
 .personal-links li a {
     color: white;
     font-size: 2.125rem;
 }
 
- .about-me-container {
+.about-me-container {
     position: relative;
     top: 80px;
     left: 15%;
@@ -110,31 +114,40 @@ nav h1 {
     border-left: .5px solid gray;
     width: max-content;
     padding: 2px 0px 2px 10px;
- }
- .about-me-header {
+}
+
+.about-me-header {
     color: var(--blue-text);
- }
- 
- .about-bio {
+}
+
+.about-bio {
     font-weight: 400;
- }
- .about-me-icons {
+}
+
+.about-me-icons {
     display: flex;
     gap: 20px;
     list-style-type: none;
     padding: 0;
- }
+}
+
+.about-me-icons li:hover {
+    transform: translate(0px, -5px);
+    transition: all 1s;
+
+}
 
 
 @media screen and (max-width: 600px) {
     .nav-list {
-      float: none;
-      text-align: center;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-      gap: 5px;
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+        gap: 5px;
     }
+
     .intro-body-info {
         font-size: 1.1rem;
 
@@ -143,14 +156,16 @@ nav h1 {
     .image-container {
         left: 50%;
     }
+
     .image-container img {
         width: 120px;
         height: 120px;
     }
+
     .personal-links li a {
         font-size: 1.5rem;
     }
-  }
+}
 
 
 footer {
